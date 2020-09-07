@@ -3,6 +3,7 @@
 // i 用来遍历s和t
 // ms里存s
 // flag存储最终结果
+// 复杂度: 时间复杂度O(N), 空间复杂度O(N)
 func isAnagram(s string, t string) bool {
     if len(s) != len(t) {
         return false

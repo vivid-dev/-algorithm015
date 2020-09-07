@@ -2,6 +2,7 @@
 // 解题思路：
 // 底：dp[0] = 0，dp[1] = 1
 // dp[n] = min(dp[a]*2, dp[b]*3, dp[c]*5)
+// 复杂度: 时间复杂度O(N), 空间复杂度O(N)
 func nthUglyNumber(n int) int {
     dp := make([]int, n + 1)
     dp[0] = 0

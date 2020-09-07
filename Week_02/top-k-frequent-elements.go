@@ -2,7 +2,7 @@
 // 思路: 先将数据存入map，再根据优先队列取top k
 // m 用于存储和计数
 // h 小顶堆(优先队列)
-
+// 复杂度: 时间复杂度O(NKlogK), 空间复杂度O(N)
 
 type Elem struct {
 	Val      int
