@@ -2,7 +2,7 @@
 // 思路: 先将数据存入map，再根据优先队列取top k
 // m 用于存储和计数
 // h 小顶堆(优先队列)
-// 复杂度: 时间复杂度O(NKlogK), 空间复杂度O(N)
+// 复杂度: 时间复杂度O(NlogK), 空间复杂度O(N)
 
 type Elem struct {
 	Val      int
@@ -23,6 +23,10 @@ func (h IntHeap) Less(i, j int) bool {
 	return h[i].Priority < h[j].Priority
 }
 
+func (h IntHeap) Peek() Elem {
+    return h[0]
+}
+
 func (h *IntHeap) Push(val interface{}) {
 	*h = append(*h, val.(Elem))
 }
@@ -32,6 +36,7 @@ func (h *IntHeap) Pop() interface{} {
 	*h = (*h)[:len(*h)-1]
 	return tmp
 }
+
 
 func topKFrequent(nums []int, k int) []int {
 	m := make(map[int]int, 0)
@@ -45,11 +50,9 @@ func topKFrequent(nums []int, k int) []int {
 		if h.Len() < k {
 			heap.Push(h, Elem{Val: key, Priority: v})
 		} else {
-			tmp := heap.Pop(h)
-			if tmp.(Elem).Priority < v {
+			if h.Peek().Priority < v {
+                heap.Pop(h)
 				heap.Push(h, Elem{Val: key, Priority: v})
-			} else {
-				heap.Push(h, tmp)
 			}
 		}
 	}

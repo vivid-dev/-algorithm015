@@ -1,7 +1,8 @@
 // dfs解法
 // 思路: 树的先序遍历，使用栈实现
 // 使用数组实现stack
-// 遍历结果存储到res里 
+// 遍历结果存储到res里
+// 复杂度: 时间复杂度O(N), 空间复杂度O(N)
 type stack struct {
 	Stack []*TreeNode
 	Len int

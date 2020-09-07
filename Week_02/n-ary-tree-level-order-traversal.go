@@ -3,6 +3,7 @@
 // cnt 用来记录当前队列长度
 // i 遍历当前队列内容
 // j 遍历孩子节点
+// 复杂度: 时间复杂度O(N), 空间复杂度O(1)
 
 func levelOrder(root *Node) [][]int {
     res := make([][]int, 0)
