@@ -1,3 +1,4 @@
+// 解题思路:动态规划
 func maxProfit(prices []int) int {
     if len(prices) == 0 {
         return 0

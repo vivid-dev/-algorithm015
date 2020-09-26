@@ -1,3 +1,4 @@
+// 解题思路：贪心算法，排序后依次比较
 func lemonadeChange(bills []int) bool {
     cp5 := 0
     cp10 := 0
