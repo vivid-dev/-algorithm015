@@ -1,3 +1,5 @@
+// 解题思路：DP
+// 时间复杂度O(N), 空间复杂度O(1)
 func rob(nums []int) int {
     if len(nums) == 0 {
         return 0
