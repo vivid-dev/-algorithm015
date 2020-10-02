@@ -1,3 +1,5 @@
+// 解题思路:二分查找
+// 时间复杂度:O(logN), 空间复杂度O(1)
 func search(nums []int, target int) int {
     return helper(nums, 0, len(nums) - 1, target)
 }

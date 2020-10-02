@@ -1,3 +1,5 @@
+// 解题思路:贪心法
+// 时间复杂度:O(NlogN+MlogM) 空间复杂度O(1)
 func findContentChildren(g []int, s []int) int {
     sort.Ints(g)
     sort.Ints(s)

@@ -1,4 +1,5 @@
 // 解题思路：动态规划
+// 时间复杂度:O(N^2), 空间复杂度O(N)
 func jump(nums []int) int {
     // init dp结构
     n := len(nums) - 1
