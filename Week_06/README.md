@@ -11,7 +11,8 @@
 ### 3 代码示例
 #### 3.1 求最值
 https://leetcode.com/problems/longest-palindromic-substring/
-~~
+
+```
 // 动规适合的场景：
 // 1.求最值；2.计算方案总数；3.判断方案是否可行
 // 此处符合1，求最值。
@@ -26,7 +27,6 @@ https://leetcode.com/problems/longest-palindromic-substring/
 // 3 底部：
 //   s[l, r]初始状态为l==r，值为1,即只有一个字符时，自身就是回文串。
 
-```
 class Solution {
 public:
     string longestPalindrome(string s) {
