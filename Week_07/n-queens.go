@@ -1,3 +1,5 @@
+// 解题思路：并查集
+// 时间复杂度O(2^N), 空间复杂度O(N^2)
 func solveNQueens(n int) [][]string {
 	res := [][]string{}
 	backtrace(n, []string{}, map[int]bool{}, map[int]bool{}, map[int]bool{}, &res)
